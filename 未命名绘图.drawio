@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-07-05T04:49:49.917Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" etag="Xio66cYwRekmc3Bxdt9f" version="21.5.2" type="github">
+<mxfile host="app.diagrams.net" modified="2023-07-05T06:31:07.278Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" etag="6AoOxdX0zMmD31Bwh2cQ" version="21.5.2" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
-    <mxGraphModel dx="440" dy="606" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="2336" background="none" math="0" shadow="0">
+    <mxGraphModel dx="1239" dy="502" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="2336" background="none" math="0" shadow="0">
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
@@ -163,8 +163,14 @@
         <mxCell id="4rEQ4-RjstuRH-mUAFi--20" value="public:&#xa;  // If use_gpu is true, this image processor will attempt to use the GPU&#xa;  OpenclImageProcessor(bool use_gpu = true);&#xa;  // outputs basic information about the device in use.&#xa;  void DeviceInfo();&#xa;  // Loads image. Note that input is assumed to be 8 bit 1 channel grayscale.&#xa;  void LoadImage(cv::Mat&amp; input);&#xa;  // Block until all other operations are complete and then return the cv::Mat&#xa;  // corresponding to the output of previously enqueued operations.&#xa;  cv::Mat output();&#xa;  // Blocking call which finishes all commands in queue. Useful for&#xa;  // benchmarking purposes, so that you can time a subset of an operation.&#xa;  void FinishJobs();&#xa;  // Enqueue the Gaussian blur operation. This is a non-blocking call.&#xa;  void Gaussian();&#xa;  // Enqueue the Sobel Filtering operation. This is a non-blocking call.&#xa;  void Sobel();&#xa;  // Enqueue the Non-maximum suppression operation. This is a non-blocking call.&#xa;  void NonMaxSuppression();&#xa;  // Enqueue the Hysteresis Thresholding operation. This is a non-blocking call.&#xa;  void HysteresisThresholding();&#xa;  // Enqueue all stages. This is a non-blocking call.&#xa;  void Canny();" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="4rEQ4-RjstuRH-mUAFi--7">
           <mxGeometry y="712" width="430" height="338" as="geometry" />
         </mxCell>
-        <mxCell id="4rEQ4-RjstuRH-mUAFi--32" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="4rEQ4-RjstuRH-mUAFi--29" target="4rEQ4-RjstuRH-mUAFi--31">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="4rEQ4-RjstuRH-mUAFi--32" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=-0.022;entryY=0.867;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="4rEQ4-RjstuRH-mUAFi--29" target="4rEQ4-RjstuRH-mUAFi--36">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1190.0000000000002" y="1550.1" as="sourcePoint" />
+            <mxPoint x="1398.28" y="900" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1463" y="1550" />
+            </Array>
+          </mxGeometry>
         </mxCell>
         <mxCell id="4rEQ4-RjstuRH-mUAFi--29" value="private:&#xa;  // e.g. KernelPath(&quot;mykernel.cl&quot;, true); // returns: kernels/gpu/mykerne.cl&#xa;  std::string KernelPath(std::string filename, bool use_gpu);&#xa;  // Given a filename (without its path) load and return the kernel.&#xa;  cl::Kernel LoadKernel(std::string filename, std::string kernel_name,&#xa;                        bool use_gpu);" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="750" y="1530" width="430" height="100" as="geometry" />
@@ -173,13 +179,162 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="4rEQ4-RjstuRH-mUAFi--34" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="4rEQ4-RjstuRH-mUAFi--31" target="4rEQ4-RjstuRH-mUAFi--33">
-          <mxGeometry relative="1" as="geometry" />
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2027" y="1875" as="sourcePoint" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="4rEQ4-RjstuRH-mUAFi--31" value="private:&#xa;  // e.g. KernelPath(&quot;mykernel.cl&quot;, true); // returns: kernels/gpu/mykerne.cl&#xa;  std::string KernelPath(std::string filename, bool use_gpu);&#xa;" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="1240" y="1550" width="430" height="60" as="geometry" />
+          <mxGeometry x="1637" y="1860" width="430" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="4rEQ4-RjstuRH-mUAFi--33" value="/***  Private Methods  ********************************************************/&#xa;// Return the relative path to the cpu or gpu  kernel given a filename&#xa;// e.g. KernelPath(&quot;mykernel.cl&quot;, true); // returns: kernels/gpu/mykerne.cl&#xa;string OpenclImageProcessor::KernelPath(std::string filename, bool use_gpu) {&#xa;  // this is not platform independent and should be rewritten if that becomes&#xa;  // a requirement.&#xa;  string path = &quot;kernels/&quot;;&#xa;  if (use_gpu)&#xa;    path += &quot;gpu/&quot;;&#xa;  else&#xa;    path += &quot;cpu/&quot;;&#xa;  path += filename;&#xa;  return path;&#xa;}" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="1750" y="1475" width="430" height="210" as="geometry" />
+        <mxCell id="4rEQ4-RjstuRH-mUAFi--43" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.478;exitY=0.99;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="4rEQ4-RjstuRH-mUAFi--33">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2622" y="1835" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4rEQ4-RjstuRH-mUAFi--33" value="/***  Private Methods  ********************************************************/&#xa;// Return the relative path to the cpu or gpu  kernel given a filename&#xa;// e.g. KernelPath(&quot;mykernel.cl&quot;, true); // returns: kernels/gpu/mykerne.cl&#xa;&#xa;string OpenclImageProcessor::KernelPath(std::string filename, bool use_gpu) {&#xa;  // this is not platform independent and should be rewritten if that becomes&#xa;  // a requirement.&#xa;  string path = &quot;kernels/&quot;;&#xa;  if (use_gpu)&#xa;    path += &quot;gpu/&quot;;&#xa;  else&#xa;    path += &quot;cpu/&quot;;&#xa;  path += filename;&#xa;  return path;&#xa;}" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="2417" y="1590" width="430" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="4rEQ4-RjstuRH-mUAFi--35" value="返回kernel路径信息" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="2247" y="1655" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="4rEQ4-RjstuRH-mUAFi--36" value="返回kernel路径信息 的函数" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="1467" y="1850" width="170" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="4rEQ4-RjstuRH-mUAFi--37" value=" // Given a filename (without its path) load and return the kernel.&#xa;  cl::Kernel LoadKernel(std::string filename, std::string kernel_name,&#xa;                        bool use_gpu);" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="1637" y="2020" width="430" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="4rEQ4-RjstuRH-mUAFi--38" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.007;entryY=0.356;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="4rEQ4-RjstuRH-mUAFi--29" target="4rEQ4-RjstuRH-mUAFi--51">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1220" y="1580" as="sourcePoint" />
+            <mxPoint x="1385" y="1059.7" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1280" y="1580" />
+              <mxPoint x="1280" y="2071" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4rEQ4-RjstuRH-mUAFi--39" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" target="4rEQ4-RjstuRH-mUAFi--40" source="4rEQ4-RjstuRH-mUAFi--37">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2027" y="2035" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="2237" y="2050" />
+              <mxPoint x="2237" y="2050" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4rEQ4-RjstuRH-mUAFi--46" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="4rEQ4-RjstuRH-mUAFi--40" target="4rEQ4-RjstuRH-mUAFi--45">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4rEQ4-RjstuRH-mUAFi--40" value="cl::Kernel OpenclImageProcessor::LoadKernel(string filename, string kernel_name,&#xa;        bool use_gpu) {&#xa;  ifstream cl_file(KernelPath(filename, use_gpu));&#xa;  if (!cl_file.good())&#xa;    cerr &lt;&lt; &quot;Couldn&#39;t open &quot; &lt;&lt; KernelPath(filename, use_gpu) &lt;&lt; endl;&#xa;  string cl_string(istreambuf_iterator&lt;char&gt;(cl_file),&#xa;                   (istreambuf_iterator&lt;char&gt;()));&#xa;  cl::Program::Sources source(&#xa;      1, make_pair(cl_string.c_str(), cl_string.length() + 1));&#xa;  cl::Program program(context_, source);&#xa;  try {&#xa;    program.build(devices_);&#xa;  } catch (cl::Error e) {&#xa;    // If there&#39;s a build error, print out the build log to see what&#xa;    // exactly the problem was.&#xa;    cerr &lt;&lt; &quot;Build Status:\t&quot;&#xa;         &lt;&lt; program.getBuildInfo&lt;CL_PROGRAM_BUILD_STATUS&gt;(selected_device_)&#xa;         &lt;&lt; endl &lt;&lt; &quot;Build Options:\t&quot;&#xa;         &lt;&lt; program.getBuildInfo&lt;CL_PROGRAM_BUILD_OPTIONS&gt;(selected_device_)&#xa;         &lt;&lt; endl &lt;&lt; &quot;Build Log:\t &quot;&#xa;         &lt;&lt; program.getBuildInfo&lt;CL_PROGRAM_BUILD_LOG&gt;(selected_device_) &lt;&lt; endl;&#xa;  }&#xa;  return cl::Kernel(program, kernel_name.c_str());" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="2407" y="1845" width="430" height="360" as="geometry" />
+        </mxCell>
+        <mxCell id="4rEQ4-RjstuRH-mUAFi--41" value="加载kernel" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="2317" y="1970" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="4rEQ4-RjstuRH-mUAFi--44" value="KernelPath" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="2627" y="1800" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="4rEQ4-RjstuRH-mUAFi--45" value="// ifstream 是 C++ 标准库中用于读取文件的输入流类，全称为 input file stream。它是 fstream 类的派生类，&#xa;// 用于从文件中读取数据。与 fstream 不同的是，ifstream 对象只能用于读取文件，而不能用于写入文件。&#xa;ifstream cl_file(KernelPath(filename, use_gpu));&#xa;&#xa;// 判断 ifstream 对象 是否能打开&#xa;cl_file.good()&#xa;&#xa;// 构造一个字符串对象，将文件全部内容转换为字符串。&#xa;// istreambuf_iterator&lt;char&gt;(cl_file) 是一个迭代器对象，&#xa;// 我们将这个迭代器对象作为 std::string 构造函数的第一个参数，表示读取的起始位置。&#xa;// std::string 构造函数的第二个参数使用了另一个 istreambuf_iterator&lt;char&gt; 类型的默认构造函数，&#xa;// 表示读取的终止位置，即读取整个输入流的内容。&#xa;&#xa;string cl_string(istreambuf_iterator&lt;char&gt;(cl_file),&#xa;                        (istreambuf_iterator&lt;char&gt;() ) );&#xa;&#xa;// 构造 kernel 程序 的源码对象&#xa;cl::Program::Sources source( 1, make_pair(cl_string.c_str(), cl_string.length() + 1));&#xa;&#xa;// 构造 kernel 程序 对象， context_ 是当前对象初始化时构造的上下文&#xa;cl::Program program(context_, source);&#xa;&#xa;// 这段代码使用了 OpenCL 编程框架来编译并构建一个程序对象 (cl::Program)，其中 context_ 是程序上下文对象，&#xa;// source 是程序源代码字符串，devices_ 是用于编译程序的设备列表。&#xa;// 首先，通过 cl::Program 类的构造函数创建一个程序对象 program，&#xa;// 并将上下文对象 context_ 和程序源代码字符串 source 作为参数传入。&#xa;// 这个构造函数会自动将源代码编译成针对给定设备的可执行代码。&#xa;// 接着，通过 program.build(devices_) 函数来编译并构建程序。&#xa;// devices_ 参数是一个 cl::vector 类型的设备列表，表示编译程序的目标设备。&#xa;// 编译完成后，可以向目标设备提交任务并执行程序。&#xa;// 需要注意的是，在编译程序时可能会出现错误，例如代码中使用了不支持的指令或语言特性等。&#xa;// 为了处理这些错误并进行调试，通常需要将 program.build 函数放在 try-catch 块中，以捕获任何可能的异常并进行相应的处理。 &#xa; &#xa;try { program.build(devices_);}&#xa;&#xa;&#xa;// 这段代码使用了 OpenCL 编程框架来创建一个内核对象 (cl::Kernel)，其中 program 是程序对象，kernel_name 是内核函数的名称。&#xa;// cl::Kernel 类的构造函数需要传入两个参数：程序对象 program 和内核函数的名称 kernel_name，&#xa;// 这样就可以根据给定的程序对象和内核函数名称创建一个内核对象。内核对象是一个执行单元，&#xa;// 可以在指定的设备上执行内核函数，从而完成特定的计算任务。&#xa;// 这段代码返回的是创建好的内核对象，可以在之后的程序中使用该对象来执行内核函数。&#xa;// 例如，可以通过调用 cl::CommandQueue 类中的 enqueueNDRangeKernel 函数来提交一个内核函数执行的命令，&#xa;// 从而在指定设备上执行内核函数。&#xa;&#xa;return cl::Kernel(program, kernel_name.c_str());&#xa;&#xa;&#xa;&#xa;" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="3087" y="1690" width="720" height="670" as="geometry" />
+        </mxCell>
+        <mxCell id="4rEQ4-RjstuRH-mUAFi--47" value="LoadKernel 函数解释" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="2857" y="1985" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="4rEQ4-RjstuRH-mUAFi--48" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" target="4rEQ4-RjstuRH-mUAFi--49">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2847" y="1650" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4rEQ4-RjstuRH-mUAFi--49" value="// 存放 kernel 的文件路径，里面保存了各种 kernel ， 用于在GPU 的 kernel 执行。&#xa; string path = &quot;kernels/&quot;;" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="3097" y="1615" width="610" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="4rEQ4-RjstuRH-mUAFi--50" value="KernelPath 函数解释" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="2872" y="1610" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="4rEQ4-RjstuRH-mUAFi--51" value="加载 kernel 文件 的函数" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="1477" y="2060" width="150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="4rEQ4-RjstuRH-mUAFi--57" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="4rEQ4-RjstuRH-mUAFi--54" target="4rEQ4-RjstuRH-mUAFi--56">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1369.9999999999995" y="3470" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4rEQ4-RjstuRH-mUAFi--54" value="&#xa;  // Enqueue all stages. This is a non-blocking call.&#xa;  void Canny();" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="1017" y="3435" width="300" height="68" as="geometry" />
+        </mxCell>
+        <mxCell id="4rEQ4-RjstuRH-mUAFi--55" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" target="4rEQ4-RjstuRH-mUAFi--54">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="290" y="2050" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4rEQ4-RjstuRH-mUAFi--60" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="4rEQ4-RjstuRH-mUAFi--56" target="4rEQ4-RjstuRH-mUAFi--59">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4rEQ4-RjstuRH-mUAFi--56" value="// enqueues all of the canny stages&#xa;void OpenclImageProcessor::Canny() {&#xa;  Gaussian();&#xa;  Sobel();&#xa;  NonMaxSuppression();&#xa;  HysteresisThresholding();&#xa;}&#xa;}" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="1410" y="3405" width="300" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="4rEQ4-RjstuRH-mUAFi--58" value="Canny 函数 ，主要的函数" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="870" y="3425" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="4rEQ4-RjstuRH-mUAFi--59" value="// enqueues the gaussian kernel&#xa;void OpenclImageProcessor::Gaussian() {&#xa;  try {&#xa;    gaussian_.setArg(0, PrevBuff());&#xa;    gaussian_.setArg(1, NextBuff());&#xa;    gaussian_.setArg(2, input_.rows);&#xa;    gaussian_.setArg(3, input_.cols);&#xa;    // 1,1 offset and -2 to to dimensions so that we don&#39;t run on edge pixels.&#xa;    queue_.enqueueNDRangeKernel(gaussian_, cl::NDRange(1, 1),&#xa;                                cl::NDRange(input_.rows - 2, input_.cols - 2),&#xa;                                cl::NDRange(workgroup_size_, workgroup_size_),&#xa;                                NULL);&#xa;  } catch (cl::Error e) {&#xa;    cerr &lt;&lt; endl &lt;&lt; &quot;Error: &quot; &lt;&lt; e.what() &lt;&lt; &quot; : &quot; &lt;&lt; e.err() &lt;&lt; endl;&#xa;  }&#xa;    AdvanceBuff();&#xa;}" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="1810" y="3330" width="530" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="4rEQ4-RjstuRH-mUAFi--65" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="4rEQ4-RjstuRH-mUAFi--61" target="4rEQ4-RjstuRH-mUAFi--64">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4rEQ4-RjstuRH-mUAFi--61" value="OpenclImageProcessor(bool use_gpu = true);" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="1010" y="2502" width="300" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="4rEQ4-RjstuRH-mUAFi--62" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1.011;exitY=0.596;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" target="4rEQ4-RjstuRH-mUAFi--61">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="678" y="1719" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="840" y="1719" />
+              <mxPoint x="840" y="2519" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4rEQ4-RjstuRH-mUAFi--63" value="构造函数" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="720" y="1680" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="4rEQ4-RjstuRH-mUAFi--68" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="4rEQ4-RjstuRH-mUAFi--64" target="4rEQ4-RjstuRH-mUAFi--67">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4rEQ4-RjstuRH-mUAFi--64" value="// Perform all OpenCL setup steps required to have an operational image&#xa;// processor&#xa;OpenclImageProcessor::OpenclImageProcessor(bool use_gpu) {&#xa;  // Determine the NDRange size for each group. This should be made more&#xa;  // general in the future, but it works on most hardware for now.&#xa;  if (use_gpu)&#xa;    workgroup_size_ = 16;&#xa;  else&#xa;    workgroup_size_ = 1;&#xa;  // Initialize OpenCL&#xa;  try {&#xa;    cl::Platform::get(&amp;platforms_);&#xa;    if (use_gpu)&#xa;      platforms_[0].getDevices(CL_DEVICE_TYPE_GPU, &amp;devices_);&#xa;    else&#xa;      platforms_[0].getDevices(CL_DEVICE_TYPE_CPU, &amp;devices_);&#xa;    selected_device_ = GetBestDevice();&#xa;    context_ = cl::Context(devices_);&#xa;    queue_ = cl::CommandQueue(context_, selected_device_);&#xa;    // create and load the kernels&#xa;    gaussian_ = LoadKernel(&quot;gaussian_kernel.cl&quot;, &quot;gaussian_kernel&quot;, use_gpu);&#xa;    sobel_ = LoadKernel(&quot;sobel_kernel.cl&quot;, &quot;sobel_kernel&quot;, use_gpu);&#xa;    non_max_suppression_ =&#xa;           LoadKernel(&quot;non_max_supp_kernel.cl&quot;, &quot;non_max_supp_kernel&quot;, use_gpu);&#xa;    hysteresis_thresholding_ =&#xa;           LoadKernel(&quot;hyst_kernel.cl&quot;, &quot;hyst_kernel&quot;, use_gpu);&#xa;  } catch (cl::Error e) {&#xa;    cerr &lt;&lt; endl &lt;&lt; &quot;Error: &quot; &lt;&lt; e.what() &lt;&lt; &quot; : &quot; &lt;&lt; e.err() &lt;&lt; endl;&#xa;  }&#xa;}" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="1557" y="2460" width="600" height="448" as="geometry" />
+        </mxCell>
+        <mxCell id="4rEQ4-RjstuRH-mUAFi--66" value="构造函数" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="1397" y="2486" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="4rEQ4-RjstuRH-mUAFi--67" value="// platforms_ 是 当前对象的变量，这里调用函数将平台信息保存到该变量中&#xa;// platforms_ 是 个容器对象： 原来定义：std::vector&lt;cl::Platform&gt; platforms_;&#xa;&#xa;cl::Platform::get(&amp;platforms_);&#xa;&#xa;// 使用cl::Platform 对象 获取gpu设备信息&#xa;platforms_[0].getDevices(CL_DEVICE_TYPE_GPU, &amp;devices_);&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="2317" y="2460" width="600" height="448" as="geometry" />
+        </mxCell>
+        <mxCell id="4rEQ4-RjstuRH-mUAFi--69" value="解释构造函数" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="2182" y="2645" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="4rEQ4-RjstuRH-mUAFi--75" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="4rEQ4-RjstuRH-mUAFi--70" target="4rEQ4-RjstuRH-mUAFi--74">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4rEQ4-RjstuRH-mUAFi--70" value="cl::Device&amp; GetBestDevice();" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="780" y="1481" width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="4rEQ4-RjstuRH-mUAFi--72" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="4rEQ4-RjstuRH-mUAFi--17" target="4rEQ4-RjstuRH-mUAFi--70">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4rEQ4-RjstuRH-mUAFi--77" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="4rEQ4-RjstuRH-mUAFi--74" target="4rEQ4-RjstuRH-mUAFi--76">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4rEQ4-RjstuRH-mUAFi--74" value="cl::Device&amp; GetBestDevice();" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="1120" y="1481" width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="4rEQ4-RjstuRH-mUAFi--76" value="// Returns (hopefully) the discrete GPU in devices. If none are found, then the&#xa;// first GPU is returned.&#xa;cl::Device &amp;OpenclImageProcessor::GetBestDevice() {&#xa;  if (devices_.size() == 0)&#xa;    throw std::out_of_range(&quot;No devices in devices vector.&quot;);&#xa;  // look for nvidia, amd, or ati. This may yield a false positive for&#xa;  // integrated amd GPUs, but it&#39;s better than the current solution.&#xa;  std::regex valid_device(&quot;(NVIDIA|AMD|ATI)&quot;, std::regex_constants::icase);&#xa;  for (auto &amp;d : devices_) {&#xa;    if (std::regex_search(d.getInfo&lt;CL_DEVICE_VENDOR&gt;(), valid_device))&#xa;      return d;&#xa;  }&#xa;  return devices_[0];&#xa;}" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="1845" y="1391" width="460" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="4rEQ4-RjstuRH-mUAFi--78" value="获取最好的设备" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="670" y="1460" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="4rEQ4-RjstuRH-mUAFi--79" value="函数实现" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="1740" y="1460" width="70" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
