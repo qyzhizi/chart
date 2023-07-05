@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-07-05T06:31:07.278Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" etag="6AoOxdX0zMmD31Bwh2cQ" version="21.5.2" type="github">
+<mxfile host="app.diagrams.net" modified="2023-07-05T16:48:58.332Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" etag="4YkIvxF0h1tUPqO3SJkG" version="21.5.2" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
-    <mxGraphModel dx="1239" dy="502" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="2336" background="none" math="0" shadow="0">
+    <mxGraphModel dx="1968" dy="798" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="2336" background="none" math="0" shadow="0">
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
@@ -173,10 +173,15 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="4rEQ4-RjstuRH-mUAFi--29" value="private:&#xa;  // e.g. KernelPath(&quot;mykernel.cl&quot;, true); // returns: kernels/gpu/mykerne.cl&#xa;  std::string KernelPath(std::string filename, bool use_gpu);&#xa;  // Given a filename (without its path) load and return the kernel.&#xa;  cl::Kernel LoadKernel(std::string filename, std::string kernel_name,&#xa;                        bool use_gpu);" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="750" y="1530" width="430" height="100" as="geometry" />
+          <mxGeometry x="810" y="1530" width="430" height="100" as="geometry" />
         </mxCell>
         <mxCell id="4rEQ4-RjstuRH-mUAFi--30" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1.001;exitY=0.789;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="4rEQ4-RjstuRH-mUAFi--17" target="4rEQ4-RjstuRH-mUAFi--29">
           <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4rEQ4-RjstuRH-mUAFi--83" value="加载kernel 文件" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="4rEQ4-RjstuRH-mUAFi--30">
+          <mxGeometry x="-0.193" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="4rEQ4-RjstuRH-mUAFi--34" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="4rEQ4-RjstuRH-mUAFi--31" target="4rEQ4-RjstuRH-mUAFi--33">
           <mxGeometry relative="1" as="geometry">
@@ -267,6 +272,11 @@
             <mxPoint x="290" y="2050" as="sourcePoint" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="4rEQ4-RjstuRH-mUAFi--85" value="Canny 函数" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="4rEQ4-RjstuRH-mUAFi--55">
+          <mxGeometry x="-0.9782" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="4rEQ4-RjstuRH-mUAFi--60" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="4rEQ4-RjstuRH-mUAFi--56" target="4rEQ4-RjstuRH-mUAFi--59">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
@@ -306,7 +316,7 @@
         <mxCell id="4rEQ4-RjstuRH-mUAFi--66" value="构造函数" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="1397" y="2486" width="70" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="4rEQ4-RjstuRH-mUAFi--67" value="// platforms_ 是 当前对象的变量，这里调用函数将平台信息保存到该变量中&#xa;// platforms_ 是 个容器对象： 原来定义：std::vector&lt;cl::Platform&gt; platforms_;&#xa;&#xa;cl::Platform::get(&amp;platforms_);&#xa;&#xa;// 使用cl::Platform 对象 获取gpu设备信息&#xa;platforms_[0].getDevices(CL_DEVICE_TYPE_GPU, &amp;devices_);&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="4rEQ4-RjstuRH-mUAFi--67" value="// platforms_ 是 当前对象的变量，这里调用函数将平台信息保存到该变量中&#xa;// platforms_ 是 个容器对象： 原来定义：std::vector&lt;cl::Platform&gt; platforms_;&#xa;&#xa;cl::Platform::get(&amp;platforms_);&#xa;&#xa;// 使用cl::Platform 对象 获取gpu设备信息， 保存在 devices_ ， 它也是个容器&#xa;// std::vector&lt;cl::Device&gt; devices_;&#xa;&#xa;platforms_[0].getDevices(CL_DEVICE_TYPE_GPU, &amp;devices_);&#xa;&#xa;// 从devices_  返回一个最好的设备&#xa;selected_device_ = GetBestDevice();&#xa;&#xa;// 加载 高斯 内核文件， 返回 内核对象 (cl::Kernel)&#xa;// create and load the kernels&#xa;gaussian_ = LoadKernel(&quot;gaussian_kernel.cl&quot;, &quot;gaussian_kernel&quot;, use_gpu);&#xa;&#xa;// 加载 sobel 内核文件， 返回 内核对象 (cl::Kernel)&#xa;sobel_ = LoadKernel(&quot;sobel_kernel.cl&quot;, &quot;sobel_kernel&quot;, use_gpu);&#xa;&#xa;后面的分别是 极大值抑制、滞后阈值的代码。&#xa;" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="2317" y="2460" width="600" height="448" as="geometry" />
         </mxCell>
         <mxCell id="4rEQ4-RjstuRH-mUAFi--69" value="解释构造函数" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
@@ -327,6 +337,9 @@
         <mxCell id="4rEQ4-RjstuRH-mUAFi--74" value="cl::Device&amp; GetBestDevice();" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="1120" y="1481" width="180" height="30" as="geometry" />
         </mxCell>
+        <mxCell id="4rEQ4-RjstuRH-mUAFi--81" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="4rEQ4-RjstuRH-mUAFi--76" target="4rEQ4-RjstuRH-mUAFi--80">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="4rEQ4-RjstuRH-mUAFi--76" value="// Returns (hopefully) the discrete GPU in devices. If none are found, then the&#xa;// first GPU is returned.&#xa;cl::Device &amp;OpenclImageProcessor::GetBestDevice() {&#xa;  if (devices_.size() == 0)&#xa;    throw std::out_of_range(&quot;No devices in devices vector.&quot;);&#xa;  // look for nvidia, amd, or ati. This may yield a false positive for&#xa;  // integrated amd GPUs, but it&#39;s better than the current solution.&#xa;  std::regex valid_device(&quot;(NVIDIA|AMD|ATI)&quot;, std::regex_constants::icase);&#xa;  for (auto &amp;d : devices_) {&#xa;    if (std::regex_search(d.getInfo&lt;CL_DEVICE_VENDOR&gt;(), valid_device))&#xa;      return d;&#xa;  }&#xa;  return devices_[0];&#xa;}" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="1845" y="1391" width="460" height="210" as="geometry" />
         </mxCell>
@@ -335,6 +348,12 @@
         </mxCell>
         <mxCell id="4rEQ4-RjstuRH-mUAFi--79" value="函数实现" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="1740" y="1460" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="4rEQ4-RjstuRH-mUAFi--80" value="&#xa;// 这是 C++11 中的一种范围循环语法，也称为 for-each 循环。它用于遍历一个容器中的元素，每次循环将容器中的一个元素赋值给循环变量。&#xa;// 具体来说，在这段代码中，auto &amp;d 定义了一个循环变量 d，它的类型由编译器自动推导得出，可以理解为 devices_ 容器中存储的元素类型的引用。&#xa;// 后面的 devices_ 表示要遍历的容器，即设备列表。整个语法结构可以理解为“对于设备列表中的每一个设备（即容器中的每个元素），&#xa;// d将其引用赋值给变量 d，然后执行循环体”。&#xa;// 使用范围循环的好处是代码更加简洁，避免了手动维护循环变量的麻烦。同时，它也可以避免一些常见的错误，例如数组越界、迭代器失效等。&#xa;&#xa;for ( auto &amp;d : devices_)" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="2417" y="1420.75" width="795" height="150.5" as="geometry" />
+        </mxCell>
+        <mxCell id="4rEQ4-RjstuRH-mUAFi--82" value="函数解释" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="2295" y="1458" width="70" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
