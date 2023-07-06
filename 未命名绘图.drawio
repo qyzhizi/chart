@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-07-06T12:37:43.704Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" etag="8vjTwTx7BrL7knaqDL0n" version="21.5.2" type="github">
+<mxfile host="app.diagrams.net" modified="2023-07-06T12:57:35.562Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" etag="KXGmP5D1OwgW8DfnlaG3" version="21.5.2" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
-    <mxGraphModel dx="2220" dy="5852" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3300" pageHeight="4681" background="none" math="0" shadow="0">
+    <mxGraphModel dx="3489" dy="6521" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3300" pageHeight="4681" background="none" math="0" shadow="0">
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
@@ -188,14 +188,14 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="4rEQ4-RjstuRH-mUAFi--61" value="OpenclImageProcessor(bool use_gpu = true);" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="1010" y="2502" width="300" height="34" as="geometry" />
+          <mxGeometry x="1060" y="2502" width="300" height="34" as="geometry" />
         </mxCell>
         <mxCell id="4rEQ4-RjstuRH-mUAFi--62" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1.011;exitY=0.596;exitDx=0;exitDy=0;exitPerimeter=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" target="4rEQ4-RjstuRH-mUAFi--61" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="678" y="1719" as="sourcePoint" />
             <Array as="points">
-              <mxPoint x="840" y="1719" />
-              <mxPoint x="840" y="2519" />
+              <mxPoint x="980" y="1719" />
+              <mxPoint x="980" y="2519" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -253,10 +253,15 @@
           <mxGeometry x="2295" y="1458" width="70" height="30" as="geometry" />
         </mxCell>
         <mxCell id="4rEQ4-RjstuRH-mUAFi--86" value="void LoadImage(cv::Mat&amp; input);" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="940" y="3016" width="210" height="38" as="geometry" />
+          <mxGeometry x="1060" y="3017" width="210" height="38" as="geometry" />
         </mxCell>
         <mxCell id="4rEQ4-RjstuRH-mUAFi--87" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="4rEQ4-RjstuRH-mUAFi--20" target="4rEQ4-RjstuRH-mUAFi--86" edge="1">
-          <mxGeometry relative="1" as="geometry" />
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="930" y="1861" />
+              <mxPoint x="930" y="3035" />
+            </Array>
+          </mxGeometry>
         </mxCell>
         <mxCell id="4rEQ4-RjstuRH-mUAFi--89" value="加载图片，使用缓存" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="4rEQ4-RjstuRH-mUAFi--87" vertex="1" connectable="0">
           <mxGeometry x="-0.9337" y="2" relative="1" as="geometry">
@@ -291,13 +296,13 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="4rEQ4-RjstuRH-mUAFi--95" value="void LoadImage(cv::Mat&amp; input);" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="870" y="3837.25" width="210" height="38" as="geometry" />
+          <mxGeometry x="920" y="3837.25" width="210" height="38" as="geometry" />
         </mxCell>
         <mxCell id="4rEQ4-RjstuRH-mUAFi--96" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.707;exitDx=0;exitDy=0;exitPerimeter=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="4rEQ4-RjstuRH-mUAFi--20" target="4rEQ4-RjstuRH-mUAFi--95" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="750" y="1930" />
-              <mxPoint x="750" y="3860" />
+              <mxPoint x="860" y="1930" />
+              <mxPoint x="860" y="3860" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -385,6 +390,40 @@
         </mxCell>
         <mxCell id="4rEQ4-RjstuRH-mUAFi--119" value="#que canny algorithm implementing by opencl 主函数流程&#xa;#ans&#xa;github 地址：https://github.com/smskelley/canny-opencl/&#xa;&#xa;主要的程序：&#xa;https://github.com/smskelley/canny-opencl/blob/master/src/live-capture/live-capture.cpp&#xa;&#xa;&#xa;在下面程序有个关键：new OpenclImageProcessor(use_gpu)  ，OpenclImageProcessor 是这个程序的主要的类&#xa;```c++&#xa;&#xa;// Create and load the appropriate image processor&#xa;if (use_parallel)&#xa;  // create OpenclImageProcessor object &#xa;  processor.reset(new OpenclImageProcessor(use_gpu));&#xa;else&#xa;  processor.reset(new SerialImageProcessor());&#xa;&#xa;// grab new frame, convert to grayscale, detect edges, then display the result.&#xa;while (true) {&#xa;  // read a image form camera&#xa;  webcam.read(in_frame);&#xa;  cv::cvtColor(in_frame, gray_frame, cv::COLOR_BGR2GRAY);&#xa;  // loder image , create buffers &#xa;  processor-&gt;LoadImage(gray_frame);&#xa;&#xa;  processor-&gt;FinishJobs();&#xa;  {&#xa;    AutoTimer timer(onTimerFinish);&#xa;    // run canny algorithm in CPU or GPU&#xa;    processor-&gt;Canny();&#xa;    // Block until all jobs finish&#xa;    processor-&gt;FinishJobs();&#xa;  }&#xa;&#xa;  imshow(&quot;canny&quot;, processor-&gt;output());&#xa;  if (cv::waitKey(30) &gt;= 0) break;&#xa;}&#xa;```&#xa;&#xa;&#xa;#que c++ AutoTimer 类型的对象 计时&#xa;    - #ans&#xa;&#xa;```c++&#xa;// Called when timer finishes, output the amount of time it took.&#xa;void onTimerFinish(double time) {&#xa;  cout &lt;&lt; &quot;Took &quot; &lt;&lt; time &lt;&lt; &quot; milliseconds.\n&quot;;&#xa;}&#xa;{&#xa; AutoTimer timer(onTimerFinish);&#xa; processor-&gt;Canny();&#xa; processor-&gt;FinishJobs();&#xa;}&#xa;```&#xa;这段代码似乎定义了一个函数 onTimerFinish，它接受一个 double 类型的参数 time，并使用 cout 输出一个包含毫秒时间的消息到控制台。&#xa;&#xa;代码还创建了一个 AutoTimer 类型的对象，并将 onTimerFinish 作为参数传递给它的构造函数。AutoTimer 对象可能在构造时启动计时器，&#xa;并在被销毁时停止计时器（例如，当它超出作用域时）。接着在 AutoTimer 对象的作用域内调用了 processor-&gt;Canny() 和 processor-&gt;FinishJobs() 函数。&#xa;这可能意味着计时器正在测量这些函数执行所需的时间。" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="1550" y="-1730" width="840" height="870" as="geometry" />
+        </mxCell>
+        <mxCell id="K721ay5TRWsDCcdxaadF-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="K721ay5TRWsDCcdxaadF-4" target="K721ay5TRWsDCcdxaadF-8">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1130" y="4178" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="K721ay5TRWsDCcdxaadF-4" value="cv::Mat output();" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="930" y="4160" width="110" height="38" as="geometry" />
+        </mxCell>
+        <mxCell id="K721ay5TRWsDCcdxaadF-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.999;exitY=0.81;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="4rEQ4-RjstuRH-mUAFi--20" target="K721ay5TRWsDCcdxaadF-4">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="930" y="3929" as="targetPoint" />
+            <mxPoint x="750" y="1960" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="K721ay5TRWsDCcdxaadF-7" value="output()&amp;nbsp;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="K721ay5TRWsDCcdxaadF-6">
+          <mxGeometry x="-0.9493" y="-4" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="K721ay5TRWsDCcdxaadF-11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="K721ay5TRWsDCcdxaadF-8" target="K721ay5TRWsDCcdxaadF-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="K721ay5TRWsDCcdxaadF-8" value="cv::Mat output()  函数实现" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="1230" y="4160" width="170" height="38" as="geometry" />
+        </mxCell>
+        <mxCell id="K721ay5TRWsDCcdxaadF-13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="K721ay5TRWsDCcdxaadF-10" target="K721ay5TRWsDCcdxaadF-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="K721ay5TRWsDCcdxaadF-10" value="// copies the buffer back from the device and returns it. This will block.&#xa;cv::Mat OpenclImageProcessor::output() {&#xa;  // copy the buffer back&#xa;  queue_.enqueueReadBuffer(PrevBuff(), CL_TRUE, 0,&#xa;                          input_.rows * input_.cols * input_.elemSize(),&#xa;                          output_.data);&#xa;  queue_.finish();&#xa;  assert(output_.rows == input_.rows &amp;&amp; output_.cols == input_.cols);&#xa;  return output_;&#xa;}" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="1665" y="4099" width="500" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="K721ay5TRWsDCcdxaadF-12" value="output_ 是类在LoadImage 函数 中 定义的Mat 类型的对象" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="2190" y="4099" width="500" height="160" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
