@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-07-06T13:18:09.772Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" etag="RivuPPnQkPRQoMlbcpFu" version="21.5.2" type="github">
+<mxfile host="app.diagrams.net" modified="2023-07-06T13:22:22.031Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" etag="wdUBeNuij4xPos7Zc0eD" version="21.5.2" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
     <mxGraphModel dx="8140" dy="4293" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3300" pageHeight="4681" background="none" math="0" shadow="0">
       <root>
@@ -29,7 +29,7 @@
             <mxPoint x="453.0000000000001" y="960" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="e9ibqu-G14n7SKy9qkeg-0" value="父类" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="4rEQ4-RjstuRH-mUAFi--21">
+        <mxCell id="e9ibqu-G14n7SKy9qkeg-0" value="父类" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="4rEQ4-RjstuRH-mUAFi--21" vertex="1" connectable="0">
           <mxGeometry x="-0.1063" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
@@ -54,7 +54,7 @@
         <mxCell id="4rEQ4-RjstuRH-mUAFi--20" value="public:&#xa;  // If use_gpu is true, this image processor will attempt to use the GPU&#xa;  OpenclImageProcessor(bool use_gpu = true);&#xa;  // outputs basic information about the device in use.&#xa;  void DeviceInfo();&#xa;  // Loads image. Note that input is assumed to be 8 bit 1 channel grayscale.&#xa;  void LoadImage(cv::Mat&amp; input);&#xa;  // Block until all other operations are complete and then return the cv::Mat&#xa;  // corresponding to the output of previously enqueued operations.&#xa;  cv::Mat output();&#xa;  // Blocking call which finishes all commands in queue. Useful for&#xa;  // benchmarking purposes, so that you can time a subset of an operation.&#xa;  void FinishJobs();&#xa;  // Enqueue the Gaussian blur operation. This is a non-blocking call.&#xa;  void Gaussian();&#xa;  // Enqueue the Sobel Filtering operation. This is a non-blocking call.&#xa;  void Sobel();&#xa;  // Enqueue the Non-maximum suppression operation. This is a non-blocking call.&#xa;  void NonMaxSuppression();&#xa;  // Enqueue the Hysteresis Thresholding operation. This is a non-blocking call.&#xa;  void HysteresisThresholding();&#xa;  // Enqueue all stages. This is a non-blocking call.&#xa;  void Canny();" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fillColor=#008a00;fontColor=#ffffff;strokeColor=#005700;" parent="4rEQ4-RjstuRH-mUAFi--7" vertex="1">
           <mxGeometry y="712" width="430" height="338" as="geometry" />
         </mxCell>
-        <mxCell id="e9ibqu-G14n7SKy9qkeg-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="4rEQ4-RjstuRH-mUAFi--29" target="4rEQ4-RjstuRH-mUAFi--31">
+        <mxCell id="e9ibqu-G14n7SKy9qkeg-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="4rEQ4-RjstuRH-mUAFi--29" target="4rEQ4-RjstuRH-mUAFi--31" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="1450" y="1580" />
@@ -62,12 +62,12 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="e9ibqu-G14n7SKy9qkeg-7" value="返回kernel路径信息 的函数" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="e9ibqu-G14n7SKy9qkeg-6">
+        <mxCell id="e9ibqu-G14n7SKy9qkeg-7" value="返回kernel路径信息 的函数" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="e9ibqu-G14n7SKy9qkeg-6" vertex="1" connectable="0">
           <mxGeometry x="0.6377" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="e9ibqu-G14n7SKy9qkeg-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="4rEQ4-RjstuRH-mUAFi--29" target="4rEQ4-RjstuRH-mUAFi--37">
+        <mxCell id="e9ibqu-G14n7SKy9qkeg-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="4rEQ4-RjstuRH-mUAFi--29" target="4rEQ4-RjstuRH-mUAFi--37" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="1330" y="1580" />
@@ -75,7 +75,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="e9ibqu-G14n7SKy9qkeg-9" value="加载 kernel 文件 的函数" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="e9ibqu-G14n7SKy9qkeg-8">
+        <mxCell id="e9ibqu-G14n7SKy9qkeg-9" value="加载 kernel 文件 的函数" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="e9ibqu-G14n7SKy9qkeg-8" vertex="1" connectable="0">
           <mxGeometry x="0.4391" y="4" relative="1" as="geometry">
             <mxPoint x="75" y="4" as="offset" />
           </mxGeometry>
@@ -151,7 +151,7 @@
         <mxCell id="4rEQ4-RjstuRH-mUAFi--50" value="KernelPath 函数解释" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="2872" y="1677" width="130" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="e9ibqu-G14n7SKy9qkeg-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=-0.001;entryY=0.586;entryDx=0;entryDy=0;entryPerimeter=0;fontColor=#67de17;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="4rEQ4-RjstuRH-mUAFi--54" target="4rEQ4-RjstuRH-mUAFi--56">
+        <mxCell id="e9ibqu-G14n7SKy9qkeg-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=-0.001;entryY=0.586;entryDx=0;entryDy=0;entryPerimeter=0;fontColor=#67de17;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="4rEQ4-RjstuRH-mUAFi--54" target="4rEQ4-RjstuRH-mUAFi--56" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="4rEQ4-RjstuRH-mUAFi--54" value="&#xa;  // Enqueue all stages. This is a non-blocking call.&#xa;  void Canny();" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#67de17;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
@@ -173,15 +173,15 @@
             <mxPoint y="75" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="e9ibqu-G14n7SKy9qkeg-1" value="Canny 函数 ，主要的函数" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontColor=#67de17;" vertex="1" connectable="0" parent="4rEQ4-RjstuRH-mUAFi--55">
+        <mxCell id="e9ibqu-G14n7SKy9qkeg-1" value="Canny 函数 ，主要的函数" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontColor=#67de17;" parent="4rEQ4-RjstuRH-mUAFi--55" vertex="1" connectable="0">
           <mxGeometry x="0.8548" y="-2" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="e9ibqu-G14n7SKy9qkeg-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;fontColor=#67de17;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="4rEQ4-RjstuRH-mUAFi--56" target="4rEQ4-RjstuRH-mUAFi--108">
+        <mxCell id="e9ibqu-G14n7SKy9qkeg-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;fontColor=#67de17;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="4rEQ4-RjstuRH-mUAFi--56" target="4rEQ4-RjstuRH-mUAFi--108" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="e9ibqu-G14n7SKy9qkeg-5" value="函数解释" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontColor=#67de17;" vertex="1" connectable="0" parent="e9ibqu-G14n7SKy9qkeg-4">
+        <mxCell id="e9ibqu-G14n7SKy9qkeg-5" value="函数解释" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontColor=#67de17;" parent="e9ibqu-G14n7SKy9qkeg-4" vertex="1" connectable="0">
           <mxGeometry x="-0.2181" y="-2" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
@@ -363,10 +363,10 @@
         <mxCell id="4rEQ4-RjstuRH-mUAFi--111" value="&#xa;&#xa;__constant float gaus[3][3] = { {0.0625, 0.125, 0.0625},&#xa;                                {0.1250, 0.250, 0.1250},&#xa;                                {0.0625, 0.125, 0.0625} };&#xa;&#xa;#define L_SIZE 16&#xa;&#xa;// Gaussian Kernel&#xa;// data: image input data with each pixel taking up 1 byte (8Bit 1Channel)&#xa;// out: image output data (8B1C)&#xa;__kernel void gaussian_kernel(__global uchar *data,&#xa;                              __global uchar *out,&#xa;                                       size_t rows,&#xa;                                       size_t cols)&#xa;{&#xa;    int sum = 0;&#xa;    size_t g_row = get_global_id(0);&#xa;    size_t g_col = get_global_id(1);&#xa;    size_t l_row = get_local_id(0) + 1;&#xa;    size_t l_col = get_local_id(1) + 1;&#xa;    &#xa;    size_t pos = g_row * cols + g_col;&#xa;    &#xa;    __local int l_data[L_SIZE+2][L_SIZE+2];&#xa;&#xa;    // copy to local&#xa;    l_data[l_row][l_col] = data[pos];&#xa;&#xa;    // top most row&#xa;    if (l_row == 1)&#xa;    {&#xa;        l_data[0][l_col] = data[pos-cols];&#xa;        // top left&#xa;        if (l_col == 1)&#xa;            l_data[0][0] = data[pos-cols-1];&#xa;&#xa;        // top right&#xa;        else if (l_col == L_SIZE)&#xa;            l_data[0][L_SIZE+1] = data[pos-cols+1];&#xa;    }&#xa;    // bottom most row&#xa;    else if (l_row == L_SIZE)&#xa;    {&#xa;        l_data[L_SIZE+1][l_col] = data[pos+cols];&#xa;        // bottom left&#xa;        if (l_col == 1)&#xa;            l_data[L_SIZE+1][0] = data[pos+cols-1];&#xa;&#xa;        // bottom right&#xa;        else if (l_col == L_SIZE)&#xa;            l_data[L_SIZE+1][L_SIZE+1] = data[pos+cols+1];&#xa;    }&#xa;&#xa;    if (l_col == 1)&#xa;        l_data[l_row][0] = data[pos-1];&#xa;    else if (l_col == L_SIZE)&#xa;        l_data[l_row][L_SIZE+1] = data[pos+1];&#xa;&#xa;    barrier(CLK_LOCAL_MEM_FENCE);&#xa;&#xa;    for (int i = 0; i &lt; 3; i++)&#xa;        for (int j = 0; j &lt; 3; j++)&#xa;            sum += gaus[i][j] * l_data[i+l_row-1][j+l_col-1];&#xa;&#xa;    out[pos] = min(255,max(0,sum));&#xa;&#xa;    return;&#xa;}&#xa;" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="1180" y="330" width="418" height="999" as="geometry" />
         </mxCell>
-        <mxCell id="e9ibqu-G14n7SKy9qkeg-13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="4rEQ4-RjstuRH-mUAFi--114" target="e9ibqu-G14n7SKy9qkeg-12">
+        <mxCell id="e9ibqu-G14n7SKy9qkeg-13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="4rEQ4-RjstuRH-mUAFi--114" target="e9ibqu-G14n7SKy9qkeg-12" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="e9ibqu-G14n7SKy9qkeg-14" value="继续解释" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="e9ibqu-G14n7SKy9qkeg-13">
+        <mxCell id="e9ibqu-G14n7SKy9qkeg-14" value="继续解释" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="e9ibqu-G14n7SKy9qkeg-13" vertex="1" connectable="0">
           <mxGeometry x="-0.3263" y="3" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
@@ -379,7 +379,7 @@
         </mxCell>
         <mxCell id="4rEQ4-RjstuRH-mUAFi--121" value="main&amp;nbsp; loop&amp;nbsp;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontColor=#7FF087;" parent="4rEQ4-RjstuRH-mUAFi--118" vertex="1" connectable="0">
           <mxGeometry x="0.8096" y="-3" relative="1" as="geometry">
-            <mxPoint as="offset" />
+            <mxPoint x="-138" y="-3" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="4rEQ4-RjstuRH-mUAFi--116" value="main 主程序" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=39;fontColor=#7FF087;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
@@ -438,7 +438,7 @@
         <mxCell id="K721ay5TRWsDCcdxaadF-12" value="output_ 是类在LoadImage 函数 中 定义的Mat 类型的对象" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="2190" y="4099" width="500" height="160" as="geometry" />
         </mxCell>
-        <mxCell id="e9ibqu-G14n7SKy9qkeg-12" value="接下来这段程序就是处理，边缘工作项的情况，把当前工作项旁边的数据从global 数据区拷贝过来。&#xa;如图所示：&#xa;![](https://qyzhizi.cn/img/202307061913051.png)&#xa;```c++&#xa;// top most row&#xa;if (l_row == 1)&#xa;{&#xa;l_data[0][l_col] = data[pos-cols];&#xa;// top left&#xa;if (l_col == 1)&#xa;l_data[0][0] = data[pos-cols-1];&#xa;&#xa;// top right&#xa;else if (l_col == L_SIZE)&#xa;l_data[0][L_SIZE+1] = data[pos-cols+1];&#xa;}&#xa;// bottom most row&#xa;else if (l_row == L_SIZE)&#xa;{&#xa;l_data[L_SIZE+1][l_col] = data[pos+cols];&#xa;// bottom left&#xa;if (l_col == 1)&#xa;l_data[L_SIZE+1][0] = data[pos+cols-1];&#xa;&#xa;// bottom right&#xa;else if (l_col == L_SIZE)&#xa;l_data[L_SIZE+1][L_SIZE+1] = data[pos+cols+1];&#xa;}&#xa;&#xa;if (l_col == 1)&#xa;l_data[l_row][0] = data[pos-1];&#xa;else if (l_col == L_SIZE)&#xa;l_data[l_row][L_SIZE+1] = data[pos+1];&#xa;```&#xa;&#xa;```c++&#xa;// wait until all above work items have already finished.&#xa;barrier(CLK_LOCAL_MEM_FENCE);&#xa;```&#xa;这是为了等待所有工作项都完成上面的工作，这是为保证，后续工作项运算时，确保旁边8个位置的数据已经就绪了。&#xa;&#xa;&#xa;&#xa;以下程序是正式利用高斯算子，进行高斯模糊化计算。&#xa;![](https://qyzhizi.cn/img/202307061930917.png)&#xa;```c++&#xa;// gaus calculation&#xa;for (int i = 0; i &lt; 3; i++)&#xa;for (int j = 0; j &lt; 3; j++)&#xa;sum += gaus[i][j] * l_data[i+l_row-1][j+l_col-1];&#xa;&#xa;out[pos] = min(255,max(0,sum));&#xa;&#xa;return;&#xa;```" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeWidth=4;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="e9ibqu-G14n7SKy9qkeg-12" value="接下来这段程序就是处理，边缘工作项的情况，把当前工作项旁边的数据从global 数据区拷贝过来。&#xa;如图所示：&#xa;![](https://qyzhizi.cn/img/202307061913051.png)&#xa;```c++&#xa;// top most row&#xa;if (l_row == 1)&#xa;{&#xa;l_data[0][l_col] = data[pos-cols];&#xa;// top left&#xa;if (l_col == 1)&#xa;l_data[0][0] = data[pos-cols-1];&#xa;&#xa;// top right&#xa;else if (l_col == L_SIZE)&#xa;l_data[0][L_SIZE+1] = data[pos-cols+1];&#xa;}&#xa;// bottom most row&#xa;else if (l_row == L_SIZE)&#xa;{&#xa;l_data[L_SIZE+1][l_col] = data[pos+cols];&#xa;// bottom left&#xa;if (l_col == 1)&#xa;l_data[L_SIZE+1][0] = data[pos+cols-1];&#xa;&#xa;// bottom right&#xa;else if (l_col == L_SIZE)&#xa;l_data[L_SIZE+1][L_SIZE+1] = data[pos+cols+1];&#xa;}&#xa;&#xa;if (l_col == 1)&#xa;l_data[l_row][0] = data[pos-1];&#xa;else if (l_col == L_SIZE)&#xa;l_data[l_row][L_SIZE+1] = data[pos+1];&#xa;```&#xa;&#xa;```c++&#xa;// wait until all above work items have already finished.&#xa;barrier(CLK_LOCAL_MEM_FENCE);&#xa;```&#xa;这是为了等待所有工作项都完成上面的工作，这是为保证，后续工作项运算时，确保旁边8个位置的数据已经就绪了。&#xa;&#xa;&#xa;&#xa;以下程序是正式利用高斯算子，进行高斯模糊化计算。&#xa;![](https://qyzhizi.cn/img/202307061930917.png)&#xa;```c++&#xa;// gaus calculation&#xa;for (int i = 0; i &lt; 3; i++)&#xa;for (int j = 0; j &lt; 3; j++)&#xa;sum += gaus[i][j] * l_data[i+l_row-1][j+l_col-1];&#xa;&#xa;out[pos] = min(255,max(0,sum));&#xa;&#xa;return;&#xa;```" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeWidth=4;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="3410" y="409.5" width="670" height="840" as="geometry" />
         </mxCell>
       </root>
