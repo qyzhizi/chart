@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-07-05T16:48:58.332Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" etag="4YkIvxF0h1tUPqO3SJkG" version="21.5.2" type="github">
+<mxfile host="app.diagrams.net" modified="2023-07-06T05:28:19.619Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" etag="gsA-309NaatXDmkJwlmS" version="21.5.2" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
-    <mxGraphModel dx="1968" dy="798" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="2336" background="none" math="0" shadow="0">
+    <mxGraphModel dx="988" dy="444" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="2336" background="none" math="0" shadow="0">
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
@@ -261,11 +261,11 @@
         </mxCell>
         <mxCell id="4rEQ4-RjstuRH-mUAFi--57" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="4rEQ4-RjstuRH-mUAFi--54" target="4rEQ4-RjstuRH-mUAFi--56">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="1369.9999999999995" y="3470" as="sourcePoint" />
+            <mxPoint x="1324.9999999999995" y="4500" as="sourcePoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="4rEQ4-RjstuRH-mUAFi--54" value="&#xa;  // Enqueue all stages. This is a non-blocking call.&#xa;  void Canny();" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="1017" y="3435" width="300" height="68" as="geometry" />
+          <mxGeometry x="972" y="4465" width="300" height="68" as="geometry" />
         </mxCell>
         <mxCell id="4rEQ4-RjstuRH-mUAFi--55" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" target="4rEQ4-RjstuRH-mUAFi--54">
           <mxGeometry relative="1" as="geometry">
@@ -281,13 +281,13 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="4rEQ4-RjstuRH-mUAFi--56" value="// enqueues all of the canny stages&#xa;void OpenclImageProcessor::Canny() {&#xa;  Gaussian();&#xa;  Sobel();&#xa;  NonMaxSuppression();&#xa;  HysteresisThresholding();&#xa;}&#xa;}" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="1410" y="3405" width="300" height="130" as="geometry" />
+          <mxGeometry x="1365" y="4435" width="300" height="130" as="geometry" />
         </mxCell>
         <mxCell id="4rEQ4-RjstuRH-mUAFi--58" value="Canny 函数 ，主要的函数" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="870" y="3425" width="160" height="30" as="geometry" />
+          <mxGeometry x="825" y="4455" width="160" height="30" as="geometry" />
         </mxCell>
         <mxCell id="4rEQ4-RjstuRH-mUAFi--59" value="// enqueues the gaussian kernel&#xa;void OpenclImageProcessor::Gaussian() {&#xa;  try {&#xa;    gaussian_.setArg(0, PrevBuff());&#xa;    gaussian_.setArg(1, NextBuff());&#xa;    gaussian_.setArg(2, input_.rows);&#xa;    gaussian_.setArg(3, input_.cols);&#xa;    // 1,1 offset and -2 to to dimensions so that we don&#39;t run on edge pixels.&#xa;    queue_.enqueueNDRangeKernel(gaussian_, cl::NDRange(1, 1),&#xa;                                cl::NDRange(input_.rows - 2, input_.cols - 2),&#xa;                                cl::NDRange(workgroup_size_, workgroup_size_),&#xa;                                NULL);&#xa;  } catch (cl::Error e) {&#xa;    cerr &lt;&lt; endl &lt;&lt; &quot;Error: &quot; &lt;&lt; e.what() &lt;&lt; &quot; : &quot; &lt;&lt; e.err() &lt;&lt; endl;&#xa;  }&#xa;    AdvanceBuff();&#xa;}" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="1810" y="3330" width="530" height="280" as="geometry" />
+          <mxGeometry x="1765" y="4360" width="530" height="280" as="geometry" />
         </mxCell>
         <mxCell id="4rEQ4-RjstuRH-mUAFi--65" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="4rEQ4-RjstuRH-mUAFi--61" target="4rEQ4-RjstuRH-mUAFi--64">
           <mxGeometry relative="1" as="geometry" />
@@ -311,13 +311,13 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="4rEQ4-RjstuRH-mUAFi--64" value="// Perform all OpenCL setup steps required to have an operational image&#xa;// processor&#xa;OpenclImageProcessor::OpenclImageProcessor(bool use_gpu) {&#xa;  // Determine the NDRange size for each group. This should be made more&#xa;  // general in the future, but it works on most hardware for now.&#xa;  if (use_gpu)&#xa;    workgroup_size_ = 16;&#xa;  else&#xa;    workgroup_size_ = 1;&#xa;  // Initialize OpenCL&#xa;  try {&#xa;    cl::Platform::get(&amp;platforms_);&#xa;    if (use_gpu)&#xa;      platforms_[0].getDevices(CL_DEVICE_TYPE_GPU, &amp;devices_);&#xa;    else&#xa;      platforms_[0].getDevices(CL_DEVICE_TYPE_CPU, &amp;devices_);&#xa;    selected_device_ = GetBestDevice();&#xa;    context_ = cl::Context(devices_);&#xa;    queue_ = cl::CommandQueue(context_, selected_device_);&#xa;    // create and load the kernels&#xa;    gaussian_ = LoadKernel(&quot;gaussian_kernel.cl&quot;, &quot;gaussian_kernel&quot;, use_gpu);&#xa;    sobel_ = LoadKernel(&quot;sobel_kernel.cl&quot;, &quot;sobel_kernel&quot;, use_gpu);&#xa;    non_max_suppression_ =&#xa;           LoadKernel(&quot;non_max_supp_kernel.cl&quot;, &quot;non_max_supp_kernel&quot;, use_gpu);&#xa;    hysteresis_thresholding_ =&#xa;           LoadKernel(&quot;hyst_kernel.cl&quot;, &quot;hyst_kernel&quot;, use_gpu);&#xa;  } catch (cl::Error e) {&#xa;    cerr &lt;&lt; endl &lt;&lt; &quot;Error: &quot; &lt;&lt; e.what() &lt;&lt; &quot; : &quot; &lt;&lt; e.err() &lt;&lt; endl;&#xa;  }&#xa;}" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="1557" y="2460" width="600" height="448" as="geometry" />
+          <mxGeometry x="1582" y="2295" width="600" height="448" as="geometry" />
         </mxCell>
         <mxCell id="4rEQ4-RjstuRH-mUAFi--66" value="构造函数" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="1397" y="2486" width="70" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="4rEQ4-RjstuRH-mUAFi--67" value="// platforms_ 是 当前对象的变量，这里调用函数将平台信息保存到该变量中&#xa;// platforms_ 是 个容器对象： 原来定义：std::vector&lt;cl::Platform&gt; platforms_;&#xa;&#xa;cl::Platform::get(&amp;platforms_);&#xa;&#xa;// 使用cl::Platform 对象 获取gpu设备信息， 保存在 devices_ ， 它也是个容器&#xa;// std::vector&lt;cl::Device&gt; devices_;&#xa;&#xa;platforms_[0].getDevices(CL_DEVICE_TYPE_GPU, &amp;devices_);&#xa;&#xa;// 从devices_  返回一个最好的设备&#xa;selected_device_ = GetBestDevice();&#xa;&#xa;// 加载 高斯 内核文件， 返回 内核对象 (cl::Kernel)&#xa;// create and load the kernels&#xa;gaussian_ = LoadKernel(&quot;gaussian_kernel.cl&quot;, &quot;gaussian_kernel&quot;, use_gpu);&#xa;&#xa;// 加载 sobel 内核文件， 返回 内核对象 (cl::Kernel)&#xa;sobel_ = LoadKernel(&quot;sobel_kernel.cl&quot;, &quot;sobel_kernel&quot;, use_gpu);&#xa;&#xa;后面的分别是 极大值抑制、滞后阈值的代码。&#xa;" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="2317" y="2460" width="600" height="448" as="geometry" />
+        <mxCell id="4rEQ4-RjstuRH-mUAFi--67" value="// platforms_ 是 当前对象的变量，这里调用函数将平台信息保存到该变量中&#xa;// platforms_ 是 个容器对象： 原来定义：std::vector&lt;cl::Platform&gt; platforms_;&#xa;&#xa;cl::Platform::get(&amp;platforms_);&#xa;&#xa;// 使用cl::Platform 对象 获取gpu设备信息， 保存在 devices_ ， 它也是个容器&#xa;// std::vector&lt;cl::Device&gt; devices_;&#xa;&#xa;platforms_[0].getDevices(CL_DEVICE_TYPE_GPU, &amp;devices_);&#xa;&#xa;// 从devices_  返回一个最好的设备&#xa;selected_device_ = GetBestDevice();&#xa;&#xa;// 加载 高斯 内核文件， 返回 内核对象 (cl::Kernel)&#xa;// create and load the kernels&#xa;gaussian_ = LoadKernel(&quot;gaussian_kernel.cl&quot;, &quot;gaussian_kernel&quot;, use_gpu);&#xa;&#xa;// 加载 sobel 内核文件， 返回 内核对象 (cl::Kernel)&#xa;sobel_ = LoadKernel(&quot;sobel_kernel.cl&quot;, &quot;sobel_kernel&quot;, use_gpu);&#xa;&#xa;后面的分别是 极大值抑制、滞后阈值的代码。&#xa;" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;labelBorderColor=#1127F0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="2397" y="2321.5" width="600" height="395" as="geometry" />
         </mxCell>
         <mxCell id="4rEQ4-RjstuRH-mUAFi--69" value="解释构造函数" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="2182" y="2645" width="100" height="30" as="geometry" />
@@ -354,6 +354,52 @@
         </mxCell>
         <mxCell id="4rEQ4-RjstuRH-mUAFi--82" value="函数解释" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="2295" y="1458" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="4rEQ4-RjstuRH-mUAFi--86" value="void LoadImage(cv::Mat&amp; input);" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="940" y="3016" width="210" height="38" as="geometry" />
+        </mxCell>
+        <mxCell id="4rEQ4-RjstuRH-mUAFi--87" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="4rEQ4-RjstuRH-mUAFi--20" target="4rEQ4-RjstuRH-mUAFi--86">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4rEQ4-RjstuRH-mUAFi--89" value="加载图片，使用缓存" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="4rEQ4-RjstuRH-mUAFi--87">
+          <mxGeometry x="-0.9337" y="2" relative="1" as="geometry">
+            <mxPoint x="17" y="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4rEQ4-RjstuRH-mUAFi--93" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="4rEQ4-RjstuRH-mUAFi--90" target="4rEQ4-RjstuRH-mUAFi--92">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2140" y="3034.9411764705883" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4rEQ4-RjstuRH-mUAFi--94" value="LoadImage函数解释" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="4rEQ4-RjstuRH-mUAFi--93">
+          <mxGeometry x="-0.1437" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4rEQ4-RjstuRH-mUAFi--90" value="void OpenclImageProcessor::LoadImage(cv::Mat &amp;image_input) {&#xa;  // We want the rows and columns to be an integer multiple of groupSize *after*&#xa;  // 2 is subtracted from them, since all of our kernels do not run edge&#xa;  // pixels. The following math yields the following results with groupSize=16&#xa;  // (using small integers for obviousness):&#xa;  // input size   desired size&#xa;  // 31           18&#xa;  // 32           18&#xa;  // 33           18&#xa;  // 34           34&#xa;  // 35           34&#xa;  int rows = ((image_input.rows - 2) / workgroup_size_) * workgroup_size_ + 2;&#xa;  int cols = ((image_input.cols - 2) / workgroup_size_) * workgroup_size_ + 2;&#xa;  // Use these new row/cols to create a rectangle which will serve as our crop&#xa;  cv::Rect croppedArea(0, 0, cols, rows);&#xa;  // Crop the image and clone it. If it&#39;s not cloned, then the layout of the&#xa;  // data won&#39;t change, so our kernels wouldn&#39;t be writing to the correct&#xa;  // location. This could be a place of likely inefficiency. It might be&#xa;  // better to move towards not actually cropping the image, instead doing&#xa;  // more work in the kernel.&#xa;  this-&gt;input_ = image_input(croppedArea).clone();&#xa;  output_ = cv::Mat(input_.rows, input_.cols, CV_8UC1);&#xa;    NextBuff() = cl::Buffer(&#xa;          context_, CL_MEM_READ_WRITE | CL_MEM_ALLOC_HOST_PTR | CL_MEM_COPY_HOST_PTR,&#xa;      input_.rows * input_.cols * input_.elemSize(), input_.data);&#xa;    PrevBuff() = cl::Buffer(context_, CL_MEM_READ_WRITE | CL_MEM_ALLOC_HOST_PTR,&#xa;                          input_.rows * input_.cols * input_.elemSize());&#xa;  // Initialize the theta buffer&#xa;  theta_ = cl::Buffer(context_, CL_MEM_READ_WRITE | CL_MEM_ALLOC_HOST_PTR,&#xa;                     input_.rows * input_.cols * input_.elemSize());&#xa;    AdvanceBuff();&#xa;}" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="1560" y="2800" width="520" height="470" as="geometry" />
+        </mxCell>
+        <mxCell id="4rEQ4-RjstuRH-mUAFi--91" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="4rEQ4-RjstuRH-mUAFi--86" target="4rEQ4-RjstuRH-mUAFi--90">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4rEQ4-RjstuRH-mUAFi--92" value="//   为了适配 workgroup_size_  , 需要对图片进行裁剪，workgroup_size_ 是16，表示&#xa;//  gpu 工作组的大小&#xa;int rows = ((image_input.rows - 2) / workgroup_size_) * workgroup_size_ + 2;&#xa;int cols = ((image_input.cols - 2) / workgroup_size_) * workgroup_size_ + 2;" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="2260" y="2800" width="520" height="470" as="geometry" />
+        </mxCell>
+        <mxCell id="4rEQ4-RjstuRH-mUAFi--95" value="void LoadImage(cv::Mat&amp; input);" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="940" y="3430" width="210" height="38" as="geometry" />
+        </mxCell>
+        <mxCell id="4rEQ4-RjstuRH-mUAFi--96" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.707;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="4rEQ4-RjstuRH-mUAFi--20" target="4rEQ4-RjstuRH-mUAFi--95">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="750" y="1930" />
+              <mxPoint x="750" y="3449" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4rEQ4-RjstuRH-mUAFi--97" value="Gaussian()" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="4rEQ4-RjstuRH-mUAFi--96">
+          <mxGeometry x="-0.964" y="-2" relative="1" as="geometry">
+            <mxPoint x="10" as="offset" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
