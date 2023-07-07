@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-07-07T03:36:35.134Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" etag="yqTxlN5N2-RX4j22FTS6" version="21.6.1" type="github">
+<mxfile host="app.diagrams.net" modified="2023-07-07T04:50:15.407Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" etag="Ngev_aaMP-aBzqN4DQtr" version="21.6.1" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
-    <mxGraphModel dx="1163" dy="613" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3300" pageHeight="4681" background="none" math="0" shadow="0">
+    <mxGraphModel dx="1018" dy="537" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3300" pageHeight="4681" background="none" math="0" shadow="0">
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
@@ -193,14 +193,14 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="4rEQ4-RjstuRH-mUAFi--61" value="OpenclImageProcessor(bool use_gpu = true);" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="1060" y="2557" width="300" height="34" as="geometry" />
+          <mxGeometry x="1060" y="2519" width="300" height="34" as="geometry" />
         </mxCell>
-        <mxCell id="4rEQ4-RjstuRH-mUAFi--62" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1.011;exitY=0.596;exitDx=0;exitDy=0;exitPerimeter=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" target="4rEQ4-RjstuRH-mUAFi--61" edge="1">
+        <mxCell id="4rEQ4-RjstuRH-mUAFi--62" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.999;exitY=0.079;exitDx=0;exitDy=0;exitPerimeter=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" target="4rEQ4-RjstuRH-mUAFi--61" edge="1" source="4rEQ4-RjstuRH-mUAFi--20">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="678" y="1719" as="sourcePoint" />
             <Array as="points">
               <mxPoint x="980" y="1719" />
-              <mxPoint x="980" y="2570" />
+              <mxPoint x="980" y="2530" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -216,7 +216,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="4rEQ4-RjstuRH-mUAFi--64" value="// Perform all OpenCL setup steps required to have an operational image&#xa;// processor&#xa;OpenclImageProcessor::OpenclImageProcessor(bool use_gpu) {&#xa;  // Determine the NDRange size for each group. This should be made more&#xa;  // general in the future, but it works on most hardware for now.&#xa;  if (use_gpu)&#xa;    workgroup_size_ = 16;&#xa;  else&#xa;    workgroup_size_ = 1;&#xa;  // Initialize OpenCL&#xa;  try {&#xa;    cl::Platform::get(&amp;platforms_);&#xa;    if (use_gpu)&#xa;      platforms_[0].getDevices(CL_DEVICE_TYPE_GPU, &amp;devices_);&#xa;    else&#xa;      platforms_[0].getDevices(CL_DEVICE_TYPE_CPU, &amp;devices_);&#xa;    selected_device_ = GetBestDevice();&#xa;    context_ = cl::Context(devices_);&#xa;    queue_ = cl::CommandQueue(context_, selected_device_);&#xa;    // create and load the kernels&#xa;    gaussian_ = LoadKernel(&quot;gaussian_kernel.cl&quot;, &quot;gaussian_kernel&quot;, use_gpu);&#xa;    sobel_ = LoadKernel(&quot;sobel_kernel.cl&quot;, &quot;sobel_kernel&quot;, use_gpu);&#xa;    non_max_suppression_ =&#xa;           LoadKernel(&quot;non_max_supp_kernel.cl&quot;, &quot;non_max_supp_kernel&quot;, use_gpu);&#xa;    hysteresis_thresholding_ =&#xa;           LoadKernel(&quot;hyst_kernel.cl&quot;, &quot;hyst_kernel&quot;, use_gpu);&#xa;  } catch (cl::Error e) {&#xa;    cerr &lt;&lt; endl &lt;&lt; &quot;Error: &quot; &lt;&lt; e.what() &lt;&lt; &quot; : &quot; &lt;&lt; e.err() &lt;&lt; endl;&#xa;  }&#xa;}" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="1582" y="2350" width="468" height="448" as="geometry" />
+          <mxGeometry x="1592" y="2312" width="468" height="448" as="geometry" />
         </mxCell>
         <mxCell id="4rEQ4-RjstuRH-mUAFi--66" value="构造函数" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="1397" y="2541" width="70" height="30" as="geometry" />
@@ -225,7 +225,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="4rEQ4-RjstuRH-mUAFi--67" value="// platforms_ 是 当前对象的变量，这里调用函数将平台信息保存到该变量中&#xa;// platforms_ 是 个容器对象： 原来定义：std::vector&lt;cl::Platform&gt; platforms_;&#xa;&#xa;cl::Platform::get(&amp;platforms_);&#xa;&#xa;// 使用cl::Platform 对象 获取gpu设备信息， 保存在 devices_ ， 它也是个容器&#xa;// std::vector&lt;cl::Device&gt; devices_;&#xa;&#xa;platforms_[0].getDevices(CL_DEVICE_TYPE_GPU, &amp;devices_);&#xa;&#xa;// 从devices_  返回一个最好的设备&#xa;selected_device_ = GetBestDevice();&#xa;&#xa;// 构建上下文对象， 创建命令队列（输入：context, selected_device_）&#xa;context_ = cl::Context(devices_);&#xa;queue_ = cl::CommandQueue(context_, selected_device_);&#xa;&#xa;// 加载 高斯 内核文件， 返回 内核对象 (cl::Kernel)&#xa;// create and load the kernels&#xa;gaussian_ = LoadKernel(&quot;gaussian_kernel.cl&quot;, &quot;gaussian_kernel&quot;, use_gpu);&#xa;&#xa;// 加载 sobel 内核文件， 返回 内核对象 (cl::Kernel)&#xa;sobel_ = LoadKernel(&quot;sobel_kernel.cl&quot;, &quot;sobel_kernel&quot;, use_gpu);&#xa;&#xa;后面的分别是 极大值抑制、滞后阈值的代码。&#xa;" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;labelBorderColor=#1127F0;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="2400" y="2388" width="423" height="372" as="geometry" />
+          <mxGeometry x="2400" y="2350" width="423" height="372" as="geometry" />
         </mxCell>
         <mxCell id="4rEQ4-RjstuRH-mUAFi--75" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="4rEQ4-RjstuRH-mUAFi--70" target="4rEQ4-RjstuRH-mUAFi--74" edge="1">
           <mxGeometry relative="1" as="geometry" />
@@ -261,13 +261,13 @@
           <mxGeometry x="2320" y="1530" width="160" height="30" as="geometry" />
         </mxCell>
         <mxCell id="4rEQ4-RjstuRH-mUAFi--86" value="void LoadImage(cv::Mat&amp; input);" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="1040" y="3064" width="210" height="38" as="geometry" />
+          <mxGeometry x="1040" y="3080" width="210" height="38" as="geometry" />
         </mxCell>
         <mxCell id="4rEQ4-RjstuRH-mUAFi--87" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="4rEQ4-RjstuRH-mUAFi--20" target="4rEQ4-RjstuRH-mUAFi--86" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="930" y="1861" />
-              <mxPoint x="930" y="3080" />
+              <mxPoint x="930" y="3100" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -287,13 +287,25 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="4rEQ4-RjstuRH-mUAFi--90" value="void OpenclImageProcessor::LoadImage(cv::Mat &amp;image_input) {&#xa;  // We want the rows and columns to be an integer multiple of groupSize *after*&#xa;  // 2 is subtracted from them, since all of our kernels do not run edge&#xa;  // pixels. The following math yields the following results with groupSize=16&#xa;  // (using small integers for obviousness):&#xa;  // input size   desired size&#xa;  // 31           18&#xa;  // 32           18&#xa;  // 33           18&#xa;  // 34           34&#xa;  // 35           34&#xa;  int rows = ((image_input.rows - 2) / workgroup_size_) * workgroup_size_ + 2;&#xa;  int cols = ((image_input.cols - 2) / workgroup_size_) * workgroup_size_ + 2;&#xa;  // Use these new row/cols to create a rectangle which will serve as our crop&#xa;  cv::Rect croppedArea(0, 0, cols, rows);&#xa;  // Crop the image and clone it. If it&#39;s not cloned, then the layout of the&#xa;  // data won&#39;t change, so our kernels wouldn&#39;t be writing to the correct&#xa;  // location. This could be a place of likely inefficiency. It might be&#xa;  // better to move towards not actually cropping the image, instead doing&#xa;  // more work in the kernel.&#xa;  this-&gt;input_ = image_input(croppedArea).clone();&#xa;  output_ = cv::Mat(input_.rows, input_.cols, CV_8UC1);&#xa;    NextBuff() = cl::Buffer(&#xa;          context_, CL_MEM_READ_WRITE | CL_MEM_ALLOC_HOST_PTR | CL_MEM_COPY_HOST_PTR,&#xa;      input_.rows * input_.cols * input_.elemSize(), input_.data);&#xa;    PrevBuff() = cl::Buffer(context_, CL_MEM_READ_WRITE | CL_MEM_ALLOC_HOST_PTR,&#xa;                          input_.rows * input_.cols * input_.elemSize());&#xa;  // Initialize the theta buffer&#xa;  theta_ = cl::Buffer(context_, CL_MEM_READ_WRITE | CL_MEM_ALLOC_HOST_PTR,&#xa;                     input_.rows * input_.cols * input_.elemSize());&#xa;    AdvanceBuff();&#xa;}" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="1540" y="2847" width="520" height="470" as="geometry" />
+          <mxGeometry x="1547" y="2875" width="520" height="470" as="geometry" />
         </mxCell>
         <mxCell id="4rEQ4-RjstuRH-mUAFi--91" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="4rEQ4-RjstuRH-mUAFi--86" target="4rEQ4-RjstuRH-mUAFi--90" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1145" y="3110" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HOKv8bW5_RLBBiIwSV7--3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="4rEQ4-RjstuRH-mUAFi--92" target="HOKv8bW5_RLBBiIwSV7--2">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
+        <mxCell id="HOKv8bW5_RLBBiIwSV7--4" value="总结" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="HOKv8bW5_RLBBiIwSV7--3">
+          <mxGeometry x="0.1731" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="4rEQ4-RjstuRH-mUAFi--92" value="- #area/programming&#xa;#que OpenclImageProcessor::LoadImage(cv::Mat &amp;image_input) 的解释, 这个是canny opencl 实现的一部分&#xa;- #ans&#xa;```c++&#xa;//   for adaptation to workgroup_size_  , need cut origin image ，workgroup_size_ // is 16，that represent gpu workgroup size.&#xa;&#xa;int rows = ((image_input.rows - 2) / workgroup_size_) * workgroup_size_ + 2;&#xa;int cols = ((image_input.cols - 2) / workgroup_size_) * workgroup_size_ + 2;&#xa;&#xa;// create rect area in the origin image by new cols and new rows&#xa;cv::Rect croppedArea(0, 0, cols, rows);&#xa;&#xa;// clone origin image ,so the layout of data will chang, so the kernels will writing // to the correct location.&#xa;this-&gt;input_ = image_input(croppedArea).clone();&#xa;&#xa;// create mat object store  output&#xa;output_ = cv::Mat(input_.rows, input_.cols, CV_8UC1);&#xa;&#xa;// create Buffer object&#xa;NextBuff() = cl::Buffer(&#xa;      context_, CL_MEM_READ_WRITE | CL_MEM_ALLOC_HOST_PTR | CL_MEM_COPY_HOST_PTR,&#xa;  input_.rows * input_.cols * input_.elemSize(), input_.data);&#xa;PrevBuff() = cl::Buffer(context_, CL_MEM_READ_WRITE | CL_MEM_ALLOC_HOST_PTR,&#xa;                      input_.rows * input_.cols * input_.elemSize());&#xa;&#xa;```&#xa;定义了两个`buffer`, 还定义了两个函数，其中NextBuff() 返回下标`buffer_index_`的缓存引用，PrevBuff()返回另外一个。&#xa;根据 OpenCL 1.2 规范，CL_MEM_ALLOC_HOST_PTR 标志指示 OpenCL 运行时系统为缓冲区分配主机可访问的内存空间，&#xa;并通过 clEnqueueMapBuffer 或 clEnqueueMapImage 等函数将缓冲区映射到主机内存空间中，以便主机程序可以直接访问缓冲区中的数据。&#xa;这种方法可以避免在主机和设备之间频繁地复制数据，从而提高数据传输的效率。&#xa;使用了 CL_MEM_ALLOC_HOST_PTR 标志，表明 OpenCL 运行时系统会为缓冲区分配主机可访问的内存空间，&#xa;并将缓冲区映射到主机内存空间中，以便主机程序直接访问缓冲区中的数据。在这种情况下，缓冲区的内存空间只在主机上分配了一次，&#xa;而在设备上并没有分配内存空间。当主机程序访问缓冲区时，OpenCL 运行时系统将负责将数据从主机内存传输到设备内存中，&#xa;以便设备程序可以访问数据。当设备程序访问缓冲区时，OpenCL 运行时系统将负责将数据从设备内存传输到主机内存中，&#xa;以便主机程序可以访问数据。&#xa;&#xa;`CL_MEM_READ_WRITE`: 分配的内存可以读可写&#xa;`CL_MEM_ALLOC_HOST_PTR`: 主机内存与设备内存都分配了空间&#xa;`CL_MEM_COPY_HOST_PTR`: 标志用于指定缓冲区对象初始化时从主机内存中拷贝数据到设备内存中。这意味着在创建缓冲区对象时，&#xa;OpenCL 运行时系统会将 `input_.data` 指向的数据从主机内存中拷贝到设备内存中的对应位置。&#xa;&#xa;&#xa;```c++&#xa;  // Initialize the theta buffer&#xa;  theta_ = cl::Buffer(context_, CL_MEM_READ_WRITE | CL_MEM_ALLOC_HOST_PTR,&#xa;                     input_.rows * input_.cols * input_.elemSize());&#xa;```&#xa;存放 梯度角度的缓存&#xa;&#xa;```c++&#xa;AdvanceBuff();&#xa;}&#xa;```&#xa;交换缓存，输入缓存、输出缓存交换位置。" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="3110" y="2743" width="760" height="680" as="geometry" />
+          <mxGeometry x="2290" y="2770" width="760" height="680" as="geometry" />
         </mxCell>
         <mxCell id="4rEQ4-RjstuRH-mUAFi--99" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="4rEQ4-RjstuRH-mUAFi--95" target="4rEQ4-RjstuRH-mUAFi--98" edge="1">
           <mxGeometry relative="1" as="geometry" />
@@ -445,7 +457,10 @@
           <mxGeometry x="3410" y="409.5" width="670" height="840" as="geometry" />
         </mxCell>
         <mxCell id="HOKv8bW5_RLBBiIwSV7--0" value="总结：&#xa;- 获取设备信息&#xa;- 使用设备信息，创建命令队列，用于提交内核对象到设备执行&#xa;- 生成内核对象（高斯滤波、sobel、极大值抑制、滞后阈值）" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;labelBorderColor=#1127F0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="2900" y="2538" width="423" height="72" as="geometry" />
+          <mxGeometry x="2910" y="2500" width="423" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="HOKv8bW5_RLBBiIwSV7--2" value="总结：&#xa;- 裁剪图片，保证图片可以划分为工作组的整数倍&#xa;- 将裁剪后的图片拷贝一份，保存到input_， 这样可以保证工作组索引不会引用错误的像素。&#xa;- 创建两个缓存，该缓存的生命周期由opencl 的运行时管理，不用担心内存回收的问题&#xa;- 这两个缓存是个循环缓存，分别代表kernel 对象的输入与输出，后续还有几个kernel 对象需要执行，它们是串&#xa;连的，将这个两个缓存的的名称转换，原来的输出变为输入，原来的输入将保存当前 kernel 的输出。最开始的输入就是&#xa;原始裁剪后的图片。&#xa;- 这里两个缓存是沟通主机内存与设备显存的桥梁，它们有opencl 运行时实现，缓存可以实现在主机申请内存，&#xa;但设备需要数据时，自动把数据传输到设备。同样可以把设备的线显存的数据输出到主机内存。&#xa;" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="3210" y="3030" width="655" height="160" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
