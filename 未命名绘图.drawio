@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-07-06T13:22:22.031Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" etag="wdUBeNuij4xPos7Zc0eD" version="21.5.2" type="github">
+<mxfile host="app.diagrams.net" modified="2023-07-07T03:36:35.134Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" etag="yqTxlN5N2-RX4j22FTS6" version="21.6.1" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
-    <mxGraphModel dx="8140" dy="4293" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3300" pageHeight="4681" background="none" math="0" shadow="0">
+    <mxGraphModel dx="1163" dy="613" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3300" pageHeight="4681" background="none" math="0" shadow="0">
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
@@ -221,8 +221,11 @@
         <mxCell id="4rEQ4-RjstuRH-mUAFi--66" value="构造函数" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="1397" y="2541" width="70" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="4rEQ4-RjstuRH-mUAFi--67" value="// platforms_ 是 当前对象的变量，这里调用函数将平台信息保存到该变量中&#xa;// platforms_ 是 个容器对象： 原来定义：std::vector&lt;cl::Platform&gt; platforms_;&#xa;&#xa;cl::Platform::get(&amp;platforms_);&#xa;&#xa;// 使用cl::Platform 对象 获取gpu设备信息， 保存在 devices_ ， 它也是个容器&#xa;// std::vector&lt;cl::Device&gt; devices_;&#xa;&#xa;platforms_[0].getDevices(CL_DEVICE_TYPE_GPU, &amp;devices_);&#xa;&#xa;// 从devices_  返回一个最好的设备&#xa;selected_device_ = GetBestDevice();&#xa;&#xa;// 加载 高斯 内核文件， 返回 内核对象 (cl::Kernel)&#xa;// create and load the kernels&#xa;gaussian_ = LoadKernel(&quot;gaussian_kernel.cl&quot;, &quot;gaussian_kernel&quot;, use_gpu);&#xa;&#xa;// 加载 sobel 内核文件， 返回 内核对象 (cl::Kernel)&#xa;sobel_ = LoadKernel(&quot;sobel_kernel.cl&quot;, &quot;sobel_kernel&quot;, use_gpu);&#xa;&#xa;后面的分别是 极大值抑制、滞后阈值的代码。&#xa;" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;labelBorderColor=#1127F0;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="2397" y="2376.5" width="600" height="395" as="geometry" />
+        <mxCell id="HOKv8bW5_RLBBiIwSV7--1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="4rEQ4-RjstuRH-mUAFi--67" target="HOKv8bW5_RLBBiIwSV7--0">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4rEQ4-RjstuRH-mUAFi--67" value="// platforms_ 是 当前对象的变量，这里调用函数将平台信息保存到该变量中&#xa;// platforms_ 是 个容器对象： 原来定义：std::vector&lt;cl::Platform&gt; platforms_;&#xa;&#xa;cl::Platform::get(&amp;platforms_);&#xa;&#xa;// 使用cl::Platform 对象 获取gpu设备信息， 保存在 devices_ ， 它也是个容器&#xa;// std::vector&lt;cl::Device&gt; devices_;&#xa;&#xa;platforms_[0].getDevices(CL_DEVICE_TYPE_GPU, &amp;devices_);&#xa;&#xa;// 从devices_  返回一个最好的设备&#xa;selected_device_ = GetBestDevice();&#xa;&#xa;// 构建上下文对象， 创建命令队列（输入：context, selected_device_）&#xa;context_ = cl::Context(devices_);&#xa;queue_ = cl::CommandQueue(context_, selected_device_);&#xa;&#xa;// 加载 高斯 内核文件， 返回 内核对象 (cl::Kernel)&#xa;// create and load the kernels&#xa;gaussian_ = LoadKernel(&quot;gaussian_kernel.cl&quot;, &quot;gaussian_kernel&quot;, use_gpu);&#xa;&#xa;// 加载 sobel 内核文件， 返回 内核对象 (cl::Kernel)&#xa;sobel_ = LoadKernel(&quot;sobel_kernel.cl&quot;, &quot;sobel_kernel&quot;, use_gpu);&#xa;&#xa;后面的分别是 极大值抑制、滞后阈值的代码。&#xa;" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;labelBorderColor=#1127F0;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="2400" y="2388" width="423" height="372" as="geometry" />
         </mxCell>
         <mxCell id="4rEQ4-RjstuRH-mUAFi--75" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="4rEQ4-RjstuRH-mUAFi--70" target="4rEQ4-RjstuRH-mUAFi--74" edge="1">
           <mxGeometry relative="1" as="geometry" />
@@ -248,14 +251,14 @@
         <mxCell id="4rEQ4-RjstuRH-mUAFi--78" value="获取最好的设备" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="670" y="1460" width="110" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="4rEQ4-RjstuRH-mUAFi--79" value="函数实现" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="1740" y="1525" width="70" height="30" as="geometry" />
+        <mxCell id="4rEQ4-RjstuRH-mUAFi--79" value="GetBestDevice()函数实现" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="1657" y="1530" width="160" height="30" as="geometry" />
         </mxCell>
         <mxCell id="4rEQ4-RjstuRH-mUAFi--80" value="&#xa;// 这是 C++11 中的一种范围循环语法，也称为 for-each 循环。它用于遍历一个容器中的元素，每次循环将容器中的一个元素赋值给循环变量。&#xa;// 具体来说，在这段代码中，auto &amp;d 定义了一个循环变量 d，它的类型由编译器自动推导得出，可以理解为 devices_ 容器中存储的元素类型的引用。&#xa;// 后面的 devices_ 表示要遍历的容器，即设备列表。整个语法结构可以理解为“对于设备列表中的每一个设备（即容器中的每个元素），&#xa;// d将其引用赋值给变量 d，然后执行循环体”。&#xa;// 使用范围循环的好处是代码更加简洁，避免了手动维护循环变量的麻烦。同时，它也可以避免一些常见的错误，例如数组越界、迭代器失效等。&#xa;&#xa;for ( auto &amp;d : devices_)" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="2417" y="1485.75" width="795" height="150.5" as="geometry" />
+          <mxGeometry x="2490" y="1485.75" width="795" height="150.5" as="geometry" />
         </mxCell>
-        <mxCell id="4rEQ4-RjstuRH-mUAFi--82" value="函数解释" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="2295" y="1523" width="70" height="30" as="geometry" />
+        <mxCell id="4rEQ4-RjstuRH-mUAFi--82" value="GetBestDevice()函数解释" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="2320" y="1530" width="160" height="30" as="geometry" />
         </mxCell>
         <mxCell id="4rEQ4-RjstuRH-mUAFi--86" value="void LoadImage(cv::Mat&amp; input);" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="1040" y="3064" width="210" height="38" as="geometry" />
@@ -440,6 +443,9 @@
         </mxCell>
         <mxCell id="e9ibqu-G14n7SKy9qkeg-12" value="接下来这段程序就是处理，边缘工作项的情况，把当前工作项旁边的数据从global 数据区拷贝过来。&#xa;如图所示：&#xa;![](https://qyzhizi.cn/img/202307061913051.png)&#xa;```c++&#xa;// top most row&#xa;if (l_row == 1)&#xa;{&#xa;l_data[0][l_col] = data[pos-cols];&#xa;// top left&#xa;if (l_col == 1)&#xa;l_data[0][0] = data[pos-cols-1];&#xa;&#xa;// top right&#xa;else if (l_col == L_SIZE)&#xa;l_data[0][L_SIZE+1] = data[pos-cols+1];&#xa;}&#xa;// bottom most row&#xa;else if (l_row == L_SIZE)&#xa;{&#xa;l_data[L_SIZE+1][l_col] = data[pos+cols];&#xa;// bottom left&#xa;if (l_col == 1)&#xa;l_data[L_SIZE+1][0] = data[pos+cols-1];&#xa;&#xa;// bottom right&#xa;else if (l_col == L_SIZE)&#xa;l_data[L_SIZE+1][L_SIZE+1] = data[pos+cols+1];&#xa;}&#xa;&#xa;if (l_col == 1)&#xa;l_data[l_row][0] = data[pos-1];&#xa;else if (l_col == L_SIZE)&#xa;l_data[l_row][L_SIZE+1] = data[pos+1];&#xa;```&#xa;&#xa;```c++&#xa;// wait until all above work items have already finished.&#xa;barrier(CLK_LOCAL_MEM_FENCE);&#xa;```&#xa;这是为了等待所有工作项都完成上面的工作，这是为保证，后续工作项运算时，确保旁边8个位置的数据已经就绪了。&#xa;&#xa;&#xa;&#xa;以下程序是正式利用高斯算子，进行高斯模糊化计算。&#xa;![](https://qyzhizi.cn/img/202307061930917.png)&#xa;```c++&#xa;// gaus calculation&#xa;for (int i = 0; i &lt; 3; i++)&#xa;for (int j = 0; j &lt; 3; j++)&#xa;sum += gaus[i][j] * l_data[i+l_row-1][j+l_col-1];&#xa;&#xa;out[pos] = min(255,max(0,sum));&#xa;&#xa;return;&#xa;```" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeWidth=4;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="3410" y="409.5" width="670" height="840" as="geometry" />
+        </mxCell>
+        <mxCell id="HOKv8bW5_RLBBiIwSV7--0" value="总结：&#xa;- 获取设备信息&#xa;- 使用设备信息，创建命令队列，用于提交内核对象到设备执行&#xa;- 生成内核对象（高斯滤波、sobel、极大值抑制、滞后阈值）" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;labelBorderColor=#1127F0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="2900" y="2538" width="423" height="72" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
