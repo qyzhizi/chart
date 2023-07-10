@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-07-10T14:34:40.601Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" etag="cvD1V4KaUvKtxRBJdOT6" version="21.6.1" type="github">
+<mxfile host="app.diagrams.net" modified="2023-07-10T14:36:33.785Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" etag="aDGxVyYUjkMmCLaBsERn" version="21.6.1" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
     <mxGraphModel dx="4884" dy="2576" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -144,7 +144,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="OdRXh-BIDO6TWCTbir-k-59" value="&lt;font color=&quot;#ff33ff&quot; style=&quot;font-size: 16px;&quot;&gt;当我在命令行执行：`./bin/edge_detect&amp;nbsp; --help` 后的效果&lt;/font&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="2572.5" y="97.00000000000023" width="415" height="120" as="geometry" />
+          <mxGeometry x="2262.5" y="50.00000000000023" width="415" height="120" as="geometry" />
         </mxCell>
         <mxCell id="OdRXh-BIDO6TWCTbir-k-66" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;fontFamily=Helvetica;fontSize=12;fontColor=default;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="OdRXh-BIDO6TWCTbir-k-65" target="OdRXh-BIDO6TWCTbir-k-44">
           <mxGeometry relative="1" as="geometry" />
@@ -235,7 +235,7 @@
           <mxGeometry x="2016.25" y="1220" width="393.75" height="120" as="geometry" />
         </mxCell>
         <mxCell id="OdRXh-BIDO6TWCTbir-k-104" value="&lt;div&gt;&lt;font color=&quot;#33ff33&quot;&gt;qy@Q:~/Documents/gitdownload/canny-edge-detector&lt;/font&gt;$ ./bin/edge_detect&amp;nbsp; --help&lt;/div&gt;&lt;div&gt;Usage: edge_detect [OPTION...]&lt;/div&gt;&lt;div&gt;Canny edge detector written in C++.&amp;nbsp;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; Takes an input bitmap (.bmp) image and outputs a bitmap image&amp;nbsp;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; containing strong edges only.&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; Supports serial and parallel execution of the algorithm.&amp;nbsp;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; Serial version runs on the host CPU, while the parallel version&amp;nbsp;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; supports execution on an NVIDIA GPU by using the CUDA C++ framework.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; -i, --input-file=FILENAME&amp;nbsp; Input image filename.&lt;/div&gt;&lt;div&gt;&amp;nbsp; -o, --output-file=FILENAME Output image filename.&lt;/div&gt;&lt;div&gt;&amp;nbsp; -s, --serial&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;Execute serially on host CPU (GPU otherwise).&lt;/div&gt;&lt;div&gt;&amp;nbsp; -?, --help&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;Give this help list&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; --usage&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; Give a short usage message&lt;/div&gt;&lt;div&gt;&amp;nbsp; -V, --version&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; Print program version&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Mandatory or optional arguments to long options are also mandatory or optional&lt;/div&gt;&lt;div&gt;for any corresponding short options.&lt;/div&gt;" style="whiteSpace=wrap;html=1;verticalAlign=top;labelBackgroundColor=default;align=left;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="2520" y="276.9300000000003" width="520" height="307.2" as="geometry" />
+          <mxGeometry x="2210" y="229.9300000000003" width="520" height="307.2" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
