@@ -1,9 +1,12 @@
-<mxfile host="app.diagrams.net" modified="2023-07-10T14:36:33.785Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" etag="aDGxVyYUjkMmCLaBsERn" version="21.6.1" type="github">
+<mxfile host="app.diagrams.net" modified="2023-07-10T14:40:20.159Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" etag="aMFZJrjXeH--dgXs9hw4" version="21.6.1" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
-    <mxGraphModel dx="4884" dy="2576" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="3053" dy="1610" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
+        <mxCell id="OdRXh-BIDO6TWCTbir-k-108" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Helvetica;fontSize=12;fontColor=default;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="OdRXh-BIDO6TWCTbir-k-11" target="OdRXh-BIDO6TWCTbir-k-107">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="OdRXh-BIDO6TWCTbir-k-11" value="头文件中定义了相关的结构体与回调函数" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="586.81" y="50" width="120" height="100" as="geometry" />
         </mxCell>
@@ -182,8 +185,11 @@
         <mxCell id="OdRXh-BIDO6TWCTbir-k-90" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Helvetica;fontSize=12;fontColor=default;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="OdRXh-BIDO6TWCTbir-k-88" target="OdRXh-BIDO6TWCTbir-k-89">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
+        <mxCell id="OdRXh-BIDO6TWCTbir-k-110" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Helvetica;fontSize=12;fontColor=default;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="OdRXh-BIDO6TWCTbir-k-88" target="OdRXh-BIDO6TWCTbir-k-109">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="OdRXh-BIDO6TWCTbir-k-88" value="&lt;font color=&quot;#ff66ff&quot; style=&quot;font-size: 17px;&quot;&gt;头文件在main函数中的调用&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;glass=0;strokeColor=default;strokeWidth=1;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=default;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="1517" y="70" width="246" height="60" as="geometry" />
+          <mxGeometry x="1516" y="60" width="246" height="60" as="geometry" />
         </mxCell>
         <mxCell id="OdRXh-BIDO6TWCTbir-k-92" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Helvetica;fontSize=12;fontColor=default;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="OdRXh-BIDO6TWCTbir-k-89" target="OdRXh-BIDO6TWCTbir-k-93">
           <mxGeometry relative="1" as="geometry">
@@ -236,6 +242,12 @@
         </mxCell>
         <mxCell id="OdRXh-BIDO6TWCTbir-k-104" value="&lt;div&gt;&lt;font color=&quot;#33ff33&quot;&gt;qy@Q:~/Documents/gitdownload/canny-edge-detector&lt;/font&gt;$ ./bin/edge_detect&amp;nbsp; --help&lt;/div&gt;&lt;div&gt;Usage: edge_detect [OPTION...]&lt;/div&gt;&lt;div&gt;Canny edge detector written in C++.&amp;nbsp;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; Takes an input bitmap (.bmp) image and outputs a bitmap image&amp;nbsp;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; containing strong edges only.&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; Supports serial and parallel execution of the algorithm.&amp;nbsp;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; Serial version runs on the host CPU, while the parallel version&amp;nbsp;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; supports execution on an NVIDIA GPU by using the CUDA C++ framework.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; -i, --input-file=FILENAME&amp;nbsp; Input image filename.&lt;/div&gt;&lt;div&gt;&amp;nbsp; -o, --output-file=FILENAME Output image filename.&lt;/div&gt;&lt;div&gt;&amp;nbsp; -s, --serial&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;Execute serially on host CPU (GPU otherwise).&lt;/div&gt;&lt;div&gt;&amp;nbsp; -?, --help&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;Give this help list&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; --usage&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; Give a short usage message&lt;/div&gt;&lt;div&gt;&amp;nbsp; -V, --version&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; Print program version&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Mandatory or optional arguments to long options are also mandatory or optional&lt;/div&gt;&lt;div&gt;for any corresponding short options.&lt;/div&gt;" style="whiteSpace=wrap;html=1;verticalAlign=top;labelBackgroundColor=default;align=left;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="2210" y="229.9300000000003" width="520" height="307.2" as="geometry" />
+        </mxCell>
+        <mxCell id="OdRXh-BIDO6TWCTbir-k-107" value="&lt;font color=&quot;#33ff33&quot;&gt;原文链接：&lt;br&gt;https://github.com/qyzhizi/canny-edge-detector/blob/main/inc/ed_args.h&lt;/font&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="786.81" y="50" width="403.19" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="OdRXh-BIDO6TWCTbir-k-109" value="&lt;font color=&quot;#33ff33&quot;&gt;原文链接：&lt;br&gt;&lt;span style=&quot;font-size: 17px;&quot;&gt;https://github.com/qyzhizi/canny-edge-detector/blob/main/src/main.cpp&lt;/span&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;glass=0;strokeColor=default;strokeWidth=1;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=default;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="1796.81" y="40" width="377" height="100" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
